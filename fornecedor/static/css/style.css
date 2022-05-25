@@ -1,0 +1,55 @@
+body{
+    background: aliceblue;
+}
+
+.container-intro{
+    margin-top: 4em;
+}
+
+.container-img{
+    margin: 2em;
+}
+
+
+.container-form{
+    width: 100vh;
+    margin: 6em 0 0 44em;
+}
+
+.form-input-email, .form-input-password{
+    width: 55vh;
+    padding: .5em;
+
+    border: none;
+    background: rgb(226, 226, 226);
+}
+
+
+.container-confirm{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    width: 55vh;
+
+    margin-top: 1em;
+}
+
+
+.button-login{
+    margin-top: 2em;
+    width: 27.5vh;
+    padding: .9em;
+    
+    border: none;
+    background: rgb(66, 121, 240);
+    color: white;
+}
+
+.material-symbols-outlined{
+    position: absolute;
+    left: 4em;
+    color: rgb(66, 121, 240);
+
+}

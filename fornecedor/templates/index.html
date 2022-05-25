@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %} Home {% endblock %}
+
+
+{% block tituloPagina %} Fornecedor {% endblock %}
+
+{% block conteudo %}
+<div class="text-center container-intro">
+  <div class="container-img">
+    <img src="{% static 'assets/login.svg' %}" alt="login">
+  </div>
+  <div>
+    <h1>Welcome!</h1>
+    <h3>Sign in to you account</h3>
+  </div>
+</div>
+<div class="container-form">  
+  <form class="form" action="logged.html" method="post">
+    <div class="container-input-email">
+      <label for="inputEmail1" class="form-label-email">Email:</label><br>
+      <input type="email" class="form-input-email" id="inputEmail1" aria-describedby="emailHelp">
+      <span class="material-symbols-outlined icon-user">
+        person
+      </span>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="container-form-password">
+      <label for="inputPassword1" class="form-label-password">Password:</label><br>
+      <input type="password" class="form-input-password" id="inputPassword1">
+      <span class="material-symbols-outlined">
+        visibility
+      </span>
+    </div>
+    <div class="container-confirm">
+      <div class="container-form-check">
+        <input type="checkbox" id="check-remenber">
+        <label for="check-remenber">remenber me?</label>
+      </div>
+      <div>
+        <a href="">forgot password?</a>
+      </div>
+    </div>   
+    <button type="submit" class="button-login">Sign in</button>
+    <span class="material-symbols-outlined">
+      arrow_forward
+    </span>
+  </form>
+</div>
+{% endblock %}
+   
