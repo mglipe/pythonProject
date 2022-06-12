@@ -1,0 +1,76 @@
+{% extends "../base.html" %}
+
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/estiloCadastro.css'%}">
+{% endblock %}
+
+{%block title %}Cadastrar{% endblock %}
+
+
+{% block content %}
+<header class="">
+    <div class="container-header">
+        <span class="material-symbols-outlined icon-welcome">
+            account_circle
+        </span>
+        <div class="container-welcome">
+            <h1>Create Account!</h1>
+        </div>
+    </div>
+</header>
+<section class="section-form">
+    <form action="{% url 'cadastro' %}" method="POST" class="container-form">
+        {% csrf_token %}
+        <div class="container-username">
+            <div class="container-input-username">
+                <label for="username">Name</label><br>
+                <input type="text" name="username" id="username" placeholder="enter your name" class="input-text" required>
+            </div>
+            <span class="material-symbols-outlined icon-user">
+                person
+            </span>
+        </div>
+        <div class="container-email">
+            <div class="container-input-email">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="enter your e-mail" class="input-text" required>
+            </div>
+            <span class="material-symbols-outlined icon-email">
+                mail
+            </span>
+        </div>
+        <div class="container-password">
+            <div class="container-input-password">
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" placeholder="enter a password" class="input-text" required>
+            </div>
+            <span class="material-symbols-outlined icon-password">
+                lock
+            </span>
+        </div>
+        <div class="container-submit">
+            <button type="submit">Create</button>
+            <span class="material-symbols-outlined icon-signin">
+                arrow_forward
+            </span>
+        </div> 
+    </form>
+</section>
+
+<section>
+    <div class="divisor"></div>
+
+    <div class="container-footer-flex">
+        <div class="container-footer">
+            <h3>Or create account using social media!</h3>
+            <div>
+                <a href=""><img src="{% static 'assets/facebook.png' %}" alt="facebok"></a>
+                <a href=""><img src="{% static 'assets/twitter.png' %}" alt="twitter"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

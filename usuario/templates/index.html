@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet"  href="{% static 'css/estiloLogin.css' %}">
+{% endblock %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block content %}
+<section class="container-flex">
+  <div class="flex-item-container">
+    <div class="container-img">
+      <span class="material-symbols-outlined icon-login">
+        login
+      </span> 
+    </div>
+    <div class="container-intro">
+      <h1>Welcome!</h1>
+      <h3>Sign in to you account</h3>
+    </div>
+  </div>
+  <div class="container-form flex-item-container">  
+    <form class="form flex-item" action="{% url 'index' %}" method="post">
+      {% csrf_token %}
+      <div class="container-input">
+        <div class="container-label-email">
+          <label for="inputEmail1" class="form-label-email">Email:</label><br>
+          <input type="email" class="form-input-email input-text" name="email" id="inputEmail1" placeholder="enter you name" aria-describedby="emailHelp">
+        </div>
+        <span class="material-symbols-outlined icon-user">
+          person
+        </span>
+      </div>
+      <div class="container-input">
+        <div class="container-form-password">
+          <label for="inputPassword1" class="form-label-password">Password:</label><br>
+          <input type="password" class="form-input-password input-text" name="password" id="inputPassword1" placeholder="enter password">
+         </div>
+         <span class="material-symbols-outlined icon-pass">
+          visibility
+        </span> 
+      </div>
+      <div class="container-confirm">
+        <div class="container-form-check">
+          <input type="checkbox" id="check-remenber">
+          <label for="check-remenber">remenber me?</label>
+        </div>
+        <div class="container-link-pass">
+          <a class="link-signup" href="{% url 'cadastro' %}">Sign Up</a>
+        </div>
+      </div>
+      <div class="container-submit">   
+        <button type="submit" class="button-login">Sign in</button>
+        <span class="material-symbols-outlined icon-signin">
+          arrow_forward
+        </span>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
+   

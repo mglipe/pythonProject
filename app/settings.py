@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'usuario',
     'fornecedor',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,7 +57,10 @@ ROOT_URLCONF = 'app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'fornecedor/templates')],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'fornecedor/templates'),
+            os.path.join(BASE_DIR, 'usuario/templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,6 +127,4 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'fornecedor/static')
-]
+

@@ -1,0 +1,135 @@
+body{
+    background: whitesmoke;
+  }
+
+  section{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 30vw;
+  }
+
+  .container-img{
+    display: flex;
+    flex-direction: column;
+  }
+
+  span{
+    text-align: center;
+  }
+
+
+  h1{
+    text-align: center;
+    font-size: 40pt;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  h3{
+    text-align: center;
+    margin-top: -2em;
+  }
+
+  .container-form{
+    margin: 2em 0 0 0;
+  }
+
+
+  .form{
+    width: 30vw;  
+  }
+
+  .container-input{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 2em;
+    width: 20vw;
+  }
+
+  .input-text{
+    width: 28.8vw;
+    padding: .7em;
+    border: none;
+    background: rgba(185, 182, 182, 0.452);
+  }
+
+  .input-text:focus{
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, rgb(121, 4, 121), rgba(214, 7, 94, 0.753));
+    outline: none;
+    border-image-slice: 1;
+  }
+
+  label{
+    color: rgba(34, 33, 33, 0.562);;
+  }
+
+  .container-confirm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 1em;
+  }
+
+  .container-confirm a{
+    text-decoration: none;
+    color: rgb(38, 132, 219);
+  }
+  .container-confirm a:hover{
+    text-decoration: underline;
+    transition: .5s;
+    color: rgb(80, 169, 252);
+  }
+
+
+
+  .icon-user, .icon-pass{
+    position: relative;
+    right: 1.1em;
+    top: 1em;
+
+
+  }
+
+  .material-symbols-outlined{
+    color: rgb(38, 132, 219);
+  }
+
+  .icon-login{
+    font-size:40px;
+  }
+
+  .container-submit{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  button{
+    margin-top: 1em;
+    width: 100px;
+    height: 50px;
+    background: rgb(38, 132, 219);
+    color: aliceblue;
+    text-align: initial;
+    cursor: pointer;
+    border: none;
+  }
+
+  button:hover{
+    transition: .5s;
+    background: rgb(80, 169, 252);;
+  }
+
+  .icon-signin{
+    font-size: 30px;
+    position: relative;
+    right: 1.3em;
+    top: .75em;
+    color: aliceblue;
+    cursor: pointer;
+  }
