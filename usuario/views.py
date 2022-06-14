@@ -2,7 +2,8 @@ from cgitb import reset
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import auth
-from django.contrib.auth.hashers import PBKDF2PasswordHasher
+from django.contrib.auth.hashers import make_password, check_password
+
 
 # Create your views here.
 
@@ -35,8 +36,7 @@ def cadastro(request):
         name = request.POST['username']
         email = request.POST['email']
         password = request.POST['password']
-        
-
+       
         if not name.strip():
             print("the can't field blank")
             return redirect('cadastro')
@@ -44,7 +44,7 @@ def cadastro(request):
             print('usuario ja cadastrado!')
             return redirect('cadastro')
         
-        user = User.objects.create(username= name, email= email, password= password)
+        user = User.objects.create_user(username= name, email= email, password= password)
         user.save()
         print('usuario cadastrado com sucesso!')
 
